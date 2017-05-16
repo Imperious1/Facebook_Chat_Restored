@@ -1,25 +1,22 @@
 /*
  This source was made by Ryan Zachary/Imperious1/Silentshadow/s1l3ntshadowz
 
- This extension will bring back the "Turn off chat for..." & "Turn on chat for..." options
+ This extension/script will bring back the "Turn on/off chat for all contacts except" options
  in Facebook's Advanced chat settings, which was removed around late 2016.
 
- It is statically designed, so if Facebook's HTML class names change, this will cease to work until
- updated again, or possibly never if they permanently remove the code on the site.
-
- Made in response to https://www.f**eb**k.com/help/community/question/?id=1731281727189481
+ Made in response to https://www.facebook.com/help/community/question/?id=1731281727189481
  and because I missed it too.
 
-
-
- PRIVACY POLICY - https://pastebin.com/6AbsnbcG
- 640x400
-
+ License - https://pastebin.com/6AbsnbcG
  */
 
 /**
  * Listens for Focus out events (i.e when the advanced
  * settings pop up comes up) and then runs this code
+ *
+ * Changes the class names to their defaults except
+ * it removes "hidden_elem", which makes the options
+ * visible again.
  */
 
 document.addEventListener('focusout', function () {
