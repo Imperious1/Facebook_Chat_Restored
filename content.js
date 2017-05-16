@@ -17,10 +17,39 @@
  * visible again.
  */
 
+var runNecessary = true;
+//var firstRun = true;
+
+/*
+function setListeners() {
+    document.getElementsByClassName('_42fu')[0].onclick = function () {
+        runNecessary = true;
+    };
+    document.getElementsByClassName('_42fu')[1].onclick = function () {
+        runNecessary = true;
+    };
+}*/
+
 document.addEventListener('focusout', function () {
     var whitelist = document.getElementsByClassName('whitelistSection');
-    if (whitelist.length > 0) {
+    var blacklist = document.getElementsByClassName('blacklistSection');
+
+    if (whitelist.length > 0 && runNecessary) {
         whitelist[0].className = 'pbm whitelistSection unselected';
         document.getElementsByClassName('tokenizerArea')[0].className = 'tokenizerArea';
+
+        whitelist[0].onclick = function () {
+            blacklist[0].className = 'pbm blacklistSection unselected';
+            whitelist[0].className = 'pbm whitelistSection selected';
+        };
+        blacklist[0].onclick = function () {
+            whitelist[0].className = 'pbm whitelistSection unselected';
+            blacklist[0].className = 'pbm blacklistSection selected';
+        };
+        runNecessary = false;
+        /*if (firstRun)
+            setListeners();
+
+        firstRun = false;*/
     }
 });
