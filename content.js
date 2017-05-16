@@ -8,15 +8,6 @@
  and because I missed it too.
  */
 
-/**
- * Listens for Focus out events (i.e when the advanced
- * settings pop up comes up) and then runs this code
- *
- * Changes the class names to their defaults except
- * it removes "hidden_elem", which makes the options
- * visible again.
- */
-
 var runNecessary = true;
 //var firstRun = true;
 
@@ -30,6 +21,15 @@ function setListeners() {
     };
 }*/
 
+
+/**
+ * Listens for Focus out events (i.e when the advanced
+ * settings pop up comes up) and then runs this code
+ *
+ * Changes the class names to their defaults except
+ * it removes "hidden_elem", which makes the options
+ * visible again.
+ */
 document.addEventListener('focusout', function () {
     var whitelist = document.getElementsByClassName('whitelistSection');
     var blacklist = document.getElementsByClassName('blacklistSection');
