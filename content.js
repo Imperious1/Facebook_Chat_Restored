@@ -6,8 +6,6 @@
 
  Made in response to https://www.facebook.com/help/community/question/?id=1731281727189481
  and because I missed it too.
-
- License - https://pastebin.com/6AbsnbcG
  */
 
 /**
